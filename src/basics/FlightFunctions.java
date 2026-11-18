@@ -3,6 +3,8 @@ package basics;
 
 import java.util.Scanner;
 
+import com.itvedant.firstproject.Teststaticmethod;
+
 public class FlightFunctions {
 
     static String source;
@@ -56,6 +58,21 @@ public class FlightFunctions {
 
         sc.close();
     }
+        
+//        method to display the booking information
+        static void displayBookingInformation() {
+
+            System.out.println("\n ****");
+            System.out.println("Your flight booking details are as follows:");
+            System.out.println("Airline Name: " + airlineName);
+            System.out.println("From: " + source);
+            System.out.println("To: " + destination);
+            System.out.println("No of passengers: " + noofPassengers);
+
+            System.out.println("After " + discount + "% discount, The total booking amount is Rs. "
+                    + finalTicketPrice);
+        }
+    
 
     public static void main(String[] args) {
 
@@ -64,7 +81,7 @@ public class FlightFunctions {
         System.out.println("You need to pay rupees Rs. "+finalTicketPrice);
         bookingStatus =true;
         System.out.println("Your booking is confirmed!!");
-        
+        displayBookingInformation();
 
     }
 }
