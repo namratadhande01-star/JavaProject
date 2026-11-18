@@ -4,15 +4,16 @@ import java.security.PublicKey;
 import java.util.Scanner;
 import java.util.function.BiConsumer;
 
-import javax.print.attribute.standard.PrinterName;
+//import javax.print.attribute.standard.PrinterName;
 
 public class Practice {
 
 	public static void main(String[] args) {
 		
-		
+//		
 //		int num1 = 24568;
 //		int num2 = 45679;
+//
 //		int sum = num1 + num2;
 //		System.out.println(sum);
 //
@@ -32,8 +33,8 @@ public class Practice {
 //		 System.out.println(a > b && c > a);
 //		 System.out.println(a < b || c > a);
 //	     System.out.println(!(a > b));
-//	     
-		
+	     
+	
 //		int a = 5;
 //		int b = 3;
 //		
@@ -41,26 +42,27 @@ public class Practice {
 //		System.out.println("a | b =" + (a | b)); // bitwise OR
 //		System.out.println("a ^ b =" + (a ^ b)); //Bitwise XOR
 //		System.out.println("~a = "+(~a));
-		 
-		Scanner scanner = new Scanner(System.in);
-//		System.out.println("Enter your name");
-		
-//		String name = scanner.next();
+//		 
+//		Scanner scanner = new Scanner(System.in);
+//	System.out.println("Enter your name");
+//		
+//	String name = scanner.next();
 //		System.out.println("my name is" + name);
 //		
 //		String name = scanner.nextLine();
 //		System.out.println(name);
-		
+//	
 //		System.out.println("Enter your age");
 //		int age = scanner.nextInt();
 //		System.out.println(age);
+	
+		int time = 13;
+		String result = time < 10 ? "good morning" : time < 18 ? "good day" : "good evening";
+		System.out.println(result);
 		
-//		int time = 13;
-//		String result = time < 10 ? "good morning" : time < 18 ? "good day" : "good evening";
-//		System.out.println(result);
-//		
 		
 	
-		}
 	}
+}
+
 	
