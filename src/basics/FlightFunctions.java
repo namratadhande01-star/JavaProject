@@ -18,6 +18,14 @@ public class FlightFunctions {
 
     static String passengerCategory;
     static double discount = 0.0;
+    
+    
+//    accept discount percent and return total price after discount
+    static double calculateFinalTicketFare(double percent) {
+    	discount = percent;
+    	double amountToPay = bookingPrice - bookingPrice*discount/100;
+    	return amountToPay;
+    }
 
     // Method to accept booking details
     static void setBookingDetails() {
@@ -52,6 +60,11 @@ public class FlightFunctions {
     public static void main(String[] args) {
 
         setBookingDetails();
+        finalTicketPrice = calculateFinalTicketFare(5.0);
+        System.out.println("You need to pay rupees Rs. "+finalTicketPrice);
+        bookingStatus =true;
+        System.out.println("Your booking is confirmed!!");
+        
 
     }
 }
