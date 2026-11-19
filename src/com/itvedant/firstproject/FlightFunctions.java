@@ -1,5 +1,4 @@
-
-package basics;
+package com.itvedant.firstproject;
 
 import java.util.Scanner;
 
@@ -24,7 +23,7 @@ public class FlightFunctions {
     
 //    accept discount percent and return total price after discount
     static double calculateFinalTicketFare(double percent) {
-    	discount = percent;
+//    	discount = percent;
     	double amountToPay = bookingPrice - bookingPrice*discount/100;
     	return amountToPay;
     }
@@ -49,16 +48,51 @@ public class FlightFunctions {
 
         sc.nextLine();
         passengerCategory = sc.nextLine();
-
-        bookingPrice = noofPassengers * ticketPrice;
-
-        bookingStatus = true;
-
-        System.out.println("Thank you for providing details.");
-
-        sc.close();
-    }
+//        if(noofPassengers > 0) {
+//
+//        bookingPrice = noofPassengers * ticketPrice;
+//
+//        bookingStatus = true;
+//
+//        System.out.println("Thank you for providing details.");
+//
+//        
+//    }
+//        else {
+//			System.err.println("Your booking cannot be provcessed, as number of passengers must be 1 or more");
+//			bookingPrice = noofPassengers * ticketPrice;
+//		
+//		}
+//        sc.close();
+//    }
         
+//        Switch case
+        if(noofPassengers > 0 && noofPassengers <=5) {
+     	   bookingPrice = noofPassengers *  ticketPrice;
+     	   switch(passengerCategory)
+     	   {
+     	   case "regular":
+     		   discount = 5.0;
+     		   break;
+     	   case "student":
+     		   discount = 10.0;
+     		   break;
+     	   case "armed forces":
+     		   discount = 20.0;
+     		   break;
+     		   default :
+     			   System.err.println("please provide valid category");
+     			   
+     	     	   }
+     	   bookingStatus = true;
+        }
+         else {
+ 			System.err.println("Your booking cannot be processes,as number of passengers must be 1 to 5");
+ 			bookingPrice = 0;
+ 		}
+         sc.close();
+     }
+
 //        method to display the booking information
         static void displayBookingInformation() {
 
@@ -78,13 +112,11 @@ public class FlightFunctions {
 
         setBookingDetails();
         finalTicketPrice = calculateFinalTicketFare(5.0);
+//        if(bookingStatus) {
         System.out.println("You need to pay rupees Rs. "+finalTicketPrice);
         bookingStatus =true;
         System.out.println("Your booking is confirmed!!");
         displayBookingInformation();
-
+//        }
     }
 }
-
-
-
